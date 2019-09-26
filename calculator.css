@@ -1,0 +1,6 @@
+body{
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+  background-image: linear-gradient(to bottom right, #00f9ff, #0900ff, #030056);
+}

@@ -1,0 +1,29 @@
+
+<html>
+  <head>
+    <link rel="icon" type="image/gif" href="time.gif" />
+    <title>Local and Global</title>
+    <script >
+      var x = 9; //this is global
+      var y = 5; //this is global
+      function add()
+      {
+        var x = 9; //this is local
+        var y = 4;//this is local and will redefine y for this local function
+        var sum = x + y;//this is local
+        alert("9 + 4 = "+sum);//this is local / prints 13
+      }
+      function sub()
+      {
+        var diff = x - y;
+        alert("9 - 5 =" + diff);//prints 9 - 5 = 4
+      }
+
+    </script>
+  </head>
+  <body onload = "sub()">
+        <input type= "button" value = "ADD" onclick="add()">
+        <input type= "button" value = "SUBTRACT" onclick="sub()">
+
+  </body>
+</html>

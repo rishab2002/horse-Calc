@@ -1,0 +1,38 @@
+
+<html >
+  <head>
+    <link rel="icon" type="image/gif" href="time.gif" />
+    <title>FUNCTIONS</title>
+    <script>
+      function grammerer()
+      {
+        var phrase = document.getElementById("input").value;
+        var ephrase = makeExcitingQuestion(phrase);
+        document.getElementById("output").innerHTML = ephrase;
+      }
+
+      function makeExciting(phrase)
+      {
+        phrase = phrase + "!";
+        return phrase;
+      }
+      function makeQuestion(phrase)
+      {
+        phrase = phrase + "?";
+        return phrase;
+      }
+      function makeExcitingQuestion(phrase)
+      {
+        phrase = makeExciting(phrase);
+        phrase = makeQuestion(phrase);
+        return phrase;
+      }
+      reutrn
+    </script>
+  </head>
+  <body>
+    <input type="text" id="input">
+    <input type="button" value="Click" onclick="grammerer()">
+    <span id="output"></span>
+  </body>
+</html>

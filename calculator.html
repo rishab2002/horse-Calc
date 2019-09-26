@@ -1,0 +1,159 @@
+<html>
+  <head>
+    <link rel="icon" type="image/gif" href="time.gif" />
+    <link rel="stylesheet" href="calculator.css">
+    <title>Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#horse").click(function(){
+          $("#horse").animate(
+                                {
+                                  opacity: 0
+                                }
+          );
+        });
+      });
+
+      var x = 0;
+      var y = 0;
+      var z = 0;
+
+      function GetVal()
+        {
+          x = document.getElementById("number1").value;
+          x = parseInt(x);
+
+          y = document.getElementById("number2").value;
+          y = parseInt(y);
+
+          z = document.getElementById("number3").value;
+          z = parseInt(z);
+        }
+
+        function Mult()
+          {
+
+            var num = x * y;
+            document.getElementById("output").innerHTML = num;
+          }
+        function Div()
+          {
+
+
+              var num = x / y;
+              document.getElementById("output").innerHTML = num;
+          }
+        function Sub()
+          {
+
+
+              var num = x - y;
+              document.getElementById("output").innerHTML = num;
+          }
+        function Add()
+          {
+
+
+              var num = x + y;
+              document.getElementById("output").innerHTML = num;
+          }
+
+        function WHP()
+          {
+            var min = document.getElementById('number3').value;
+            var max = document.getElementById('number4').value;
+            min = parseInt(min);
+            max = parseInt(max);
+            var x = min;
+            var result = " ";
+            var output2=" ";
+            var temp=0;
+            while(x <= max)
+            {
+              temp = x / 745.699872;
+              result = result + temp + " ";
+              output2 = output2 + x + " ";
+                x = x + 1;
+
+            }
+            document.getElementById("xnums").innerHTML= output2;
+            document.getElementById("output").innerHTML= result;
+
+          }
+
+        function Dnights()
+          {
+            var min = document.getElementById('number3').value;
+            var max = document.getElementById('number4').value;
+            min = parseInt(min);
+            max = parseInt(max);
+            var x = min;
+            var result = " ";
+            var output2=" ";
+            var temp=0;
+            while(x <= max)
+            {
+              temp = x / 14;
+              result = result + temp + " ";
+              output2 = output2 + x + " ";
+                x = x + 1;
+
+            }
+            document.getElementById("xnums").innerHTML= output2;
+            document.getElementById("output").innerHTML= result;
+          }
+
+        function Mlongs()
+          {
+            var min = document.getElementById('number3').value;
+            var max = document.getElementById('number4').value;
+            min = parseInt(min);
+            max = parseInt(max);
+            var x = min;
+            var result = " ";
+            var output2=" ";
+            var temp=0;
+            while(x <= max)
+            {
+              temp = x * 4;
+              result = result + temp + " ";
+              output2 = output2 + x + " ";
+                x = x + 1;
+
+            }
+            document.getElementById("xnums").innerHTML= output2;
+            document.getElementById("output").innerHTML= result;
+          }
+
+    </script>
+  </head>
+  <body>
+    <img src="head.png" id="header">
+    <br>
+    <input type="text" id="number1" value="Enter 1st Number">
+    <input type="text" id="number2" value="Enter 2nd Number">
+
+    <br>
+    <input type="button" value="Add" onclick = "Add()">
+    <input type="button" value="Subtract" onclick = "Sub()">
+    <input type="button" value="Multiply" onclick = "Mult()">
+    <input type="button" value="Divide" onclick = "Div()">
+    <br>
+    <img id="horse" src="horse.jpg">
+    <input type="button" value="Get Values For All Functions" onclick = "GetVal()">
+    <br>
+    <input type="text" id="number3" value="min">
+    <input type="text" id="number4" value="max">
+    <br>
+    <input type="button" value="Miles -> Furlongs" onclick="Mlongs()">
+    <input type="button" value="Days -> Fortnites" onclick="Dnights()">
+    <input type="button" value="Watts -> Horsepower" onclick="WHP()">
+
+    <br><hr>
+    <span id = "xnums"></span>
+    <br>
+    <hr>
+    <span id="output"></span>
+  </body>
+</html>
